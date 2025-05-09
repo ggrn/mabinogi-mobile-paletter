@@ -11,9 +11,11 @@ function App() {
     <div className="min-h-screen bg-gray-100 p-4">
       <header className="mb-8 text-center">
         <h1 className="text-3xl font-bold text-gray-800">마비노기 모바일 팔레터</h1>
-        <p className="text-gray-600 mt-2">
-          원하는 HEX 색상 코드를 입력하고 게임 화면에서 해당 색상을 찾으세요
-        </p>
+        <ol className="text-gray-600 mt-2 list-decimal pl-6 text-left max-w-md mx-auto">
+          <li>화면 공유 시작</li>
+          <li>창 → 마비노기 모바일 선택 후 "공유" 클릭</li>
+          <li>영역 선택해서, 염색 영역 지정</li>
+        </ol>
       </header>
 
       <main className="max-w-6xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
