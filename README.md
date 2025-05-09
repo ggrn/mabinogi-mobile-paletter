@@ -1,54 +1,55 @@
-# React + TypeScript + Vite
+# 마비노기 모바일 팔레터
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+마비노기 모바일을 위한 색상 추출 및 팔레트 도구입니다. 게임 내 염색 시스템에 사용할 색상을 쉽게 찾고 관리할 수 있습니다.
 
-Currently, two official plugins are available:
+## 기능
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **화면 캡처**: 마비노기 모바일 화면을 캡처하여 색상 추출
+- **색상 추출**: 캡처된 이미지에서 원하는 색상 추출
+- **히스토리 관리**: 사용했던 색상 저장 및 관리
+- **색상 프리셋**: 자주 사용하는 색상을 프리셋으로 저장
 
-## Expanding the ESLint configuration
+## 시작하기
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 필수 요구사항
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Node.js 18.0.0 이상
+- Yarn 1.22.0 이상
+
+### 설치 방법
+
+```bash
+# 저장소 클론
+git clone https://github.com/yourusername/mabinogi-mobile-paletter.git
+cd mabinogi-mobile-paletter
+
+# 의존성 설치
+yarn install
+
+# 개발 서버 실행
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 사용 방법
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. 화면 공유 시작
+2. 창 → 마비노기 모바일 선택 후 "공유" 클릭
+3. 영역 선택해서 염색 영역 지정
+4. 추출된 색상을 히스토리에 저장하거나 직접 사용
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 기술 스택
+
+- React 19
+- TypeScript
+- Vite
+- Tailwind CSS
+- Zustand (상태 관리)
+- Chroma.js (색상 처리)
+
+## 기여하기
+
+프로젝트에 기여하고 싶으시다면 이슈를 열거나 풀 리퀘스트를 보내주세요.
+
+## 라이센스
+
+이 프로젝트는 MIT 라이센스에 따라 라이센스가 부여됩니다.
